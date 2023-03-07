@@ -10,6 +10,7 @@ def mode(nums):
 
         >>> mode([2, 2, 3, 3, 2])
         2
+
     """
     set_of_nums = set(nums)
     freqs = {num: nums.count(num) for num in set_of_nums}

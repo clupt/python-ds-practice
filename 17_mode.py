@@ -11,3 +11,8 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    set_of_nums = set(nums)
+    freqs = {num: nums.count(num) for num in set_of_nums}
+    largest_count = max(freqs.values())
+    largest_key = [num for num in freqs if freqs[num] == largest_count]
+    return largest_key[0]

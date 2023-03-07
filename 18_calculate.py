@@ -28,3 +28,24 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
           ...
         ValueError: Invalid Operation
     """
+
+    def truncate(n):
+        if make_int:
+            return int(n)
+        else:
+            return n
+
+    if operation == 'add':
+        return f"{message} {truncate(a + b)}"
+
+    elif operation == 'subtract':
+        return f"{message} {truncate(a - b)}"
+
+    elif operation == 'multiply':
+        return f"{message} {truncate(a * b)}"
+
+    elif operation == 'divide':
+        return f"{message} {truncate(a / b)}"
+
+    else:
+        raise ValueError('Invalid Operation')

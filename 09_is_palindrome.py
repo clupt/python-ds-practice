@@ -21,3 +21,6 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    ltrs_without_spaces = [ltr for ltr in phrase if ltr != ' ']
+    string_without_spaces = "".join(ltrs_without_spaces)
+    return string_without_spaces.upper() == string_without_spaces[::-1].upper()
